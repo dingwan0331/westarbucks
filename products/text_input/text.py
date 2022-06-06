@@ -1,6 +1,7 @@
 from products.models import *
 from django.db       import models
 
+
 menus                   = ['음료' , '푸드' , '상품' , '카드' , '메뉴 이야기']
 dirnk_categories        = ['콜드 브루 커피','브루드 커피' , '에스프레소' , '프라푸치노' , '블랜디드' , '스타벅스 피지오' , '티(티바나)' , '기타 제조 음료' , '스타벅스 주스 (병음료)']
 food_categories         = ['브레드' , '케이크' , '샌드위치 & 샐러드' , '따뜻한 푸드' , '과일 & 요거트' , '스낵 & 미니 디저트' , '아이스크림']
@@ -20,4 +21,3 @@ class EasySpeed(models.Model):
     def easy_menus(class_name,args):
         for i in range(len(args)):
             class_name.objects.create(name = args[i])
-            
