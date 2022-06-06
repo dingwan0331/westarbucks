@@ -43,7 +43,7 @@ class HardSpeed(models.Model):
             protein_g        = kw['protein_g'],
             caffeine_mg      = kw['caffeine_mg'],
             drink_id         = kwargs['drink_id'],
-            size_id          = Size.objects.get(size_ml = kwargs['sizes']['size_ml']).id
+            size_id          = Size.objects.get(name = kwargs['sizes']['name']).id
         )
 
     @staticmethod
