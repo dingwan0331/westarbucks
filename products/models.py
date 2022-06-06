@@ -16,7 +16,6 @@ class Category(models.Model):
         db_table = 'categories'
 
 class Drink(models.Model):
-    name         = models.CharField(max_length=45)
     category     = models.ForeignKey('Category', on_delete=models.CASCADE)
     korean_name  = models.CharField(max_length=45)
     english_name = models.CharField(max_length=45)
@@ -25,7 +24,7 @@ class Drink(models.Model):
     class Meta:
         db_table = 'drinks'
 
-class AllergyrDrink(models.Model):
+class AllergyDrink(models.Model):
     allergy = models.ForeignKey('Allergy', on_delete=models.CASCADE)
     drink   = models.ForeignKey('Drink', on_delete=models.CASCADE)
 
